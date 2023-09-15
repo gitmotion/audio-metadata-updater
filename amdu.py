@@ -4,7 +4,6 @@ import glob
 import argparse
 from mutagen.easyid3 import EasyID3
 
-
 def updateAudioMetaData(directory_path, file_extension, metadata_json_path):
 
     if not os.path.exists(directory_path):
@@ -143,14 +142,12 @@ def updateAudioMetaData(directory_path, file_extension, metadata_json_path):
         print(file)
     print("--------------------------------------------------")
 
-
 # Call the function
 # Uncomment the following lines to run the script directly when debugging
 # directory_path = input("Enter the directory path: ")
 # file_extension = input("Enter the file extension: ")
 # metadata_json_path = input("Enter the JSON file path: ")
 # updateAudioMetaData(directory_path, file_extension, metadata_json_path)
-
 
 # Comment the following lines when debugging
 if __name__ == '__main__':
