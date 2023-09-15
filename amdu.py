@@ -4,14 +4,16 @@ import glob
 import argparse
 from mutagen.easyid3 import EasyID3
 
-
-def audioFileAttrUpdate(directory_path, file_extension):
+def updateAudioMetaData(directory_path, file_extension, metadata_json_path):
 
     if not os.path.exists(directory_path):
         print("Directory does not exist")
         return
     if file_extension is None:
         print("File extension was not provided")
+        return
+    if metadata_json_path is None:
+        print("JSON file path was not provided")
         return
 
     success_count = 0
@@ -38,8 +40,7 @@ def audioFileAttrUpdate(directory_path, file_extension):
 
     # Get JSON Metadata
     print("Getting metadata from JSON file...")
-    current_directory = os.getcwd()
-    with open(f"{current_directory}\\metadata.json") as json_file:
+    with open(metadata_json_path) as json_file:
         metadata = json.load(json_file)
         if (metadata == None):
             print("No metadata found in JSON file")
@@ -145,8 +146,8 @@ def audioFileAttrUpdate(directory_path, file_extension):
 # Uncomment the following lines to run the script directly when debugging
 # directory_path = input("Enter the directory path: ")
 # file_extension = input("Enter the file extension: ")
-# audioFileAttrUpdate(directory_path, file_extension)
-
+# metadata_json_path = input("Enter the JSON file path: ")
+# updateAudioMetaData(directory_path, file_extension, metadata_json_path)
 
 # Comment the following lines when debugging
 if __name__ == '__main__':
@@ -155,6 +156,9 @@ if __name__ == '__main__':
                         help='Path to directory containing audio files.')
     parser.add_argument('file_extension', type=str,
                         help='File extension of audio files to update.')
+    parser.add_argument('metadata_json_path', type=str,
+                        help='Path to JSON file containing metadata.')
     args = parser.parse_args()
 
-audioFileAttrUpdate(args.directory_path, args.file_extension)
+updateAudioMetaData(args.directory_path,
+                    args.file_extension, args.metadata_json_path)
