@@ -1,7 +1,7 @@
 # audio-metadata-updater
-
 - Add songs files to a given directory
 - Generate / create a .json file that contains all the metadata you want to update
+- Comes with error handling and will list out files that failed to update at the end of the log
 
 <b>Note: File name will be used as the key in the metadata.json file and must be configured accordingly</b>
 </br>
