@@ -9,6 +9,7 @@
 </br>
 - Certain special characters (?, >, <, etc) can't be added to file names and will need to be taken out of the .json file keys to account for this
 - However you can still add them in the metadata info
+- As long as the file name and the keys in the metadata.json match up you can essentially use any identifier
 
 ![specialcharacterexample](https://github.com/gitchrishan/audio-metadata-updater/assets/43588713/9533db9e-ca65-47f3-a808-02494734dfd5)
 
