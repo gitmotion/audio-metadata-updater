@@ -2,32 +2,53 @@
 
 - Add songs files to a given directory
 - Generate / create a .json file that contains all the metadata you want to update
-<b>
-Note: File name will be used as the key in the metadata.json file and must be configured accordingly
-- Certain special characters (?, >, <, etc) can't be added to file names and will need to be taken out of the .json file to account for this
+
+<b>Note: File name will be used as the key in the metadata.json file and must be configured accordingly</b>
+</br>
+- Certain special characters (?, >, <, etc) can't be added to file names and will need to be taken out of the .json file keys to account for this
 - However you can still add them in the metadata info
-</b>
+
+![specialcharacterexample](https://github.com/gitchrishan/audio-metadata-updater/assets/43588713/9533db9e-ca65-47f3-a808-02494734dfd5)
+
  
 # Execution
 <b>Debugging:</b>
-- ![debugmodeexecution](https://github.com/gitchrishan/audio-metadata-updater/assets/43588713/44482a26-188e-401a-9982-776453dbc391)
-  - uncomment following lines and comment lines after
-- ![debug_mode](https://github.com/gitchrishan/audio-metadata-updater/assets/43588713/dfe15604-ac83-4158-b80f-f4eaaa1180a1)
-  - this will allow you to input the arguments
+</br>
+![debugmodeexecution](https://github.com/gitchrishan/audio-metadata-updater/assets/43588713/44482a26-188e-401a-9982-776453dbc391)
+- uncomment following lines and comment lines after
+</br>
+
+![debug_mode](https://github.com/gitchrishan/audio-metadata-updater/assets/43588713/d5bf55b1-ee0c-4835-b3d1-d06749708152)
+- this will allow you to input the arguments
 
 <b>Terminal:</b>
-- ![image](https://github.com/gitchrishan/audio-metadata-updater/assets/43588713/c6f5e9fc-92bf-462d-9406-f832e655b44b)
+- ![terminalexecution](https://github.com/gitchrishan/audio-metadata-updater/assets/43588713/969a1c47-c934-4141-b5c2-7bd728d44fbf)
   - uncomment following lines and comment lines before
 - Using python, execute as such:
   <div>
-    <code>python amdu.py /path/to/song/directory .mp3 /path/to/metadata.json</code>
+    <code>python path/to/amdu.py /path/to/song/directory .mp3 /path/to/metadata.json</code>
+    </br>
+    Or
+    </br>
+    <code>python .\amdu.py '.\Nevertheless OST\' .mp3 '.\metadata.json'</code> (powershell)
   </div>
   - you can use any audio file extensions supported by mutagen (see documentation)
 - This will grab all *.mp3 files (or any other specified extensions) in the given directory and parse the metadata.json file and match them accordingly
 
-# Results
+# Demo & Results
+<b>Demo:</b>
+</br>
+![amdu demo](https://github.com/gitchrishan/audio-metadata-updater/assets/43588713/5cc62b9a-4efd-4e51-8041-35fbb65f9760)
+
 <b>Before:</b>
-  ![before](https://github.com/gitchrishan/audio-metadata-updater/assets/43588713/ac1e12e8-477f-4126-90db-f79dbdce7600)
+</br>
+![before](https://github.com/gitchrishan/audio-metadata-updater/assets/43588713/4c919f56-dcd0-4f24-9209-359f4d24a701)
 
 <b>After:</b>
+</br>
+![after](https://github.com/gitchrishan/audio-metadata-updater/assets/43588713/993da10c-ef44-4dd0-b36d-a03ce8536dc8)
+
+<b>View Log:</b>
+</br>
+[amdu-demo-log.txt](https://github.com/gitchrishan/audio-metadata-updater/files/12614815/amdu-demo-log.txt)
 
