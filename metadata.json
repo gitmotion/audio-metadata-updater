@@ -1,0 +1,38 @@
+{
+	"ARTISTNAME - SONGTITLE1": {
+		"Artist": "ARTISTNAME",
+		"Title": "SONGTITLE1",
+		"Album": "Test Album title",
+		"Tracknumber": "1",
+		"Copyright": "Test Copyright",
+		"Piano": "Pianist Name",
+		"Producer": "Producer Name",
+		"Vocals": "Vocalist Name",
+		"Guitar": "Guitarist Name",
+		"Composer": "Composer Name"
+	},
+	"ARTISTNAME - SONGTITLE2": {
+		"Artist": "ARTISTNAME",
+		"Title": "SONGTITLE2",
+		"Album": "Test Album title",
+		"Tracknumber": "2",
+		"Copyright": "Test Copyright",
+		"Piano": "Pianist Name",
+		"Producer": "Producer Name",
+		"Vocals": "Vocalist Name",
+		"Guitar": "Guitarist Name",
+		"Composer": "Composer Name"
+	},
+	"ARTISTNAME - SONGTITLE3": {
+		"Artist": "ARTISTNAME",
+		"Title": "SONGTITLE3",
+		"Album": "Test Album title",
+		"Tracknumber": "3",
+		"Copyright": "Test Copyright",
+		"Piano": "Pianist Name",
+		"Producer": "Producer Name",
+		"Vocals": "Vocalist Name",
+		"Guitar": "Guitarist Name",
+		"Composer": "Composer Name"
+	}
+}

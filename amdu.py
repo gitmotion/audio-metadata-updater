@@ -142,6 +142,7 @@ def updateAudioMetaData(directory_path, file_extension, metadata_json_path):
         print(file)
     print("--------------------------------------------------")
 
+
 # Call the function
 # Uncomment the following lines to run the script directly when debugging
 # directory_path = input("Enter the directory path: ")
