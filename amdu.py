@@ -4,6 +4,7 @@ import glob
 import argparse
 from mutagen.easyid3 import EasyID3
 
+
 def updateAudioMetaData(directory_path, file_extension, metadata_json_path):
 
     if not os.path.exists(directory_path):
@@ -11,6 +12,9 @@ def updateAudioMetaData(directory_path, file_extension, metadata_json_path):
         return
     if file_extension is None:
         print("File extension was not provided")
+        return
+    if metadata_json_path is None:
+        print("JSON file path was not provided")
         return
     if metadata_json_path is None:
         print("JSON file path was not provided")
@@ -40,6 +44,7 @@ def updateAudioMetaData(directory_path, file_extension, metadata_json_path):
 
     # Get JSON Metadata
     print("Getting metadata from JSON file...")
+    with open(metadata_json_path) as json_file:
     with open(metadata_json_path) as json_file:
         metadata = json.load(json_file)
         if (metadata == None):
@@ -142,12 +147,14 @@ def updateAudioMetaData(directory_path, file_extension, metadata_json_path):
         print(file)
     print("--------------------------------------------------")
 
+
 # Call the function
 # Uncomment the following lines to run the script directly when debugging
 # directory_path = input("Enter the directory path: ")
 # file_extension = input("Enter the file extension: ")
 # metadata_json_path = input("Enter the JSON file path: ")
 # updateAudioMetaData(directory_path, file_extension, metadata_json_path)
+
 
 # Comment the following lines when debugging
 if __name__ == '__main__':
@@ -158,7 +165,11 @@ if __name__ == '__main__':
                         help='File extension of audio files to update.')
     parser.add_argument('metadata_json_path', type=str,
                         help='Path to JSON file containing metadata.')
+    parser.add_argument('metadata_json_path', type=str,
+                        help='Path to JSON file containing metadata.')
     args = parser.parse_args()
 
+updateAudioMetaData(args.directory_path,
+                    args.file_extension, args.metadata_json_path)
 updateAudioMetaData(args.directory_path,
                     args.file_extension, args.metadata_json_path)
