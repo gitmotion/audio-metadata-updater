@@ -1,6 +1,8 @@
 # audio-metadata-updater
+- Uses <code>mutagen.easyid3</code>
 - Add songs files to a given directory
 - Generate / create a .json file that contains all the metadata you want to update
+- current supported metadata fields: <code>title, artist, album, tracknumber, composer, albumartist, discnumber, copyright</code>
 - Comes with error handling and will list out files that failed to update at the end of the log
 
 <b>Note: File name will be used as the key in the metadata.json file and must be configured accordingly</b>
@@ -24,24 +26,15 @@
 <b>Terminal:</b>
 - ![terminalexecution](https://github.com/gitchrishan/audio-metadata-updater/assets/43588713/969a1c47-c934-4141-b5c2-7bd728d44fbf)
   - uncomment following lines and comment lines before
-- Using python, execute as such:
+- Using <code>python</code>, execute as such:
   <div>
     <code>python path/to/amdu.py /path/to/song/directory .mp3 /path/to/metadata.json</code>
     </br>
     Or
     </br>
-    <code>python .\amdu.py '.\Nevertheless OST\' .mp3 '.\metadata.json'</code> (powershell)
+    <code>python .\amdu.py '.\AUDIO_FILE_DIRECTORY\' .mp3 '.\metadata.json'</code> (powershell)
   </div>
   - you can use any audio file extensions supported by mutagen (see documentation)
-  - current support metadata fields:
-   - title
-   - artist
-   - album
-   - tracknumber
-   - composer
-   - albumartist
-   - discnumber
-   - copyright
 - This will grab all *.mp3 files (or any other specified extensions) in the given directory and parse the metadata.json file and match them accordingly
 
 # Demo & Results
