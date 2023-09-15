@@ -33,6 +33,15 @@
     <code>python .\amdu.py '.\Nevertheless OST\' .mp3 '.\metadata.json'</code> (powershell)
   </div>
   - you can use any audio file extensions supported by mutagen (see documentation)
+  - current support metadata fields:
+   - title
+   - artist
+   - album
+   - tracknumber
+   - composer
+   - albumartist
+   - discnumber
+   - copyright
 - This will grab all *.mp3 files (or any other specified extensions) in the given directory and parse the metadata.json file and match them accordingly
 
 # Demo & Results
